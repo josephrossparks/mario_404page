@@ -1,0 +1,107 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    margin: 0; 
+    padding: 0;
+    background-color: #000000;
+}
+
+p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    color: white;
+    margin: 0;
+}
+
+.sky {
+    position: relative;
+    height: 85%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.scorebar{  
+    position: absolute;  
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.scorebar-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.toad-message {
+    position: absolute;
+    width: 60%;
+    margin-top: 25%;
+    text-align: center;
+}
+.toad-message p {
+    line-height: 2em;
+}
+
+#return-message:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.ground{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #C84C0C; 
+    /*background-image: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/groundblock.png');*/
+    background-image: url('./assets/castleblock.png');       
+}
+
+.mario{
+    position: absolute;
+    width: 71px;
+    height: 72px;
+    background: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/mariowalking/result.png') left center;    
+    top:-72px;
+    left:0px;
+    -webkit-animation: play 0.6s steps(4) infinite, run 7s both infinite linear;
+    animation: play 0.8s steps(4) infinite, run 7s both infinite linear;
+}
+
+@-webkit-keyframes play{
+    100%{background-position: -284px;}
+}
+@keyframes play{
+    100%{background-position: -284px;}
+}
+@-webkit-keyframes run{
+    from{left: -200px;}
+    to{left: 100%;}
+}
+@keyframes run{
+    from{left: -200px;}
+    to{left: 100%;}
+}
+@-webkit-keyframes wind{
+    from{left: -300px;}
+    to{left: 100%;}
+}
+@keyframes wind{
+    from{left: -300px;}
+    to{left: 100%;}
+}
+
+@media only screen and (max-width: 375px) {
+    p {
+        font-size: 0.8em;
+    }
+
+    .toad-message {
+        margin-top: 40%;
+    }
+}
