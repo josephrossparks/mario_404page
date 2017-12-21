@@ -40,7 +40,7 @@ p {
 .toad-message {
     position: absolute;
     width: 60%;
-    margin-top: 25%;
+    top: 10px;
     text-align: center;
 }
 .toad-message p {
@@ -96,12 +96,26 @@ p {
     to{left: 100%;}
 }
 
+@media only screen and (min-width: 768px) {
+    .toad-message {
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .toad-message {
+        margin-top: 15%;
+    }
+}
+
 @media only screen and (max-width: 375px) {
+    
+    .toad-message {
+        margin-top: 25%;
+    }    
+
     p {
         font-size: 0.8em;
     }
 
-    .toad-message {
-        margin-top: 40%;
-    }
 }
